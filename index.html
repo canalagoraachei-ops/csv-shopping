@@ -109,6 +109,11 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         }
 
+        /* Classe utilitária para garantir exibição */
+        .tab-content.show-active {
+            display: block !important;
+        }
+
         .app-card {
             background-color: #222222;
             border-radius: 6px;
@@ -202,15 +207,15 @@
 
         <!-- Menu Seletor por Aparelho -->
         <div class="device-tabs">
-            <button class="device-btn active" onclick="openDevice(event, 'smart-tv')">📺 Smart TVs (Samsung/LG)</button>
-            <button class="device-btn" onclick="openDevice(event, 'android-box')">📦 TV Box / Android TV / Fire Stick</button>
-            <button class="device-btn" onclick="openDevice(event, 'roku-tv')">🔷 Sistema Roku TV</button>
-            <button class="device-btn" onclick="openDevice(event, 'mobile')">📲 Celulares e Tablets (Android/iOS)</button>
-            <button class="device-btn" onclick="openDevice(event, 'pc-web')">💻 Computador e Navegadores</button>
+            <button class="device-btn active" data-target="smart-tv">📺 Smart TVs (Samsung/LG)</button>
+            <button class="device-btn" data-target="android-box">📦 TV Box / Android TV / Fire Stick</button>
+            <button class="device-btn" data-target="roku-tv">🔷 Sistema Roku TV</button>
+            <button class="device-btn" data-target="mobile">📲 Celulares e Tablets (Android/iOS)</button>
+            <button class="device-btn" data-target="pc-web">💻 Computador e Navegadores</button>
         </div>
 
         <!-- CONTEÚDO: SMART TVS -->
-        <div id="smart-tv" class="tab-content" style="display: block;">
+        <div id="smart-tv" class="tab-content show-active">
             <h3>Melhores Opções para Smart TVs (LG e Samsung)</h3>
             <p class="subtitle">Procure por um destes nomes diretamente na loja de aplicativos da sua própria televisão:</p>
             
@@ -223,7 +228,7 @@
                     <p class="recommendation-text">⭐ A MELHOR ESCOLHA: Interface ultra moderna idêntica à Netflix, carregamento rápido e alta estabilidade.</p>
                     <p><strong>Disponibilidade:</strong> Disponível na loja oficial de quase todas as TVs LG e Samsung modernas.</p>
                 </div>
-                <a href="https://w.app" target="_blank" class="btn-action">Instalei o Ibo Player - Pedir Teste</a>
+                <a href="https://w.app" target="_blank" rel="noopener noreferrer" class="btn-action">Instalei o Ibo Player - Pedir Teste</a>
             </div>
 
             <div class="app-card">
@@ -234,45 +239,44 @@
                 <div class="app-details">
                     <p><strong>Vantagem:</strong> Excelente alternativa caso sua TV antiga não tenha o Ibo Player.</p>
                 </div>
-                <a href="https://w.app" target="_blank" class="btn-action">Instalei este Aplicativo - Pedir Teste</a>
+                <a href="https://w.app" target="_blank" rel="noopener noreferrer" class="btn-action">Instalei este Aplicativo - Pedir Teste</a>
             </div>
         </div>
 
         <!-- CONTEÚDO: ANDROID BOX -->
-        <div id="android-box" class="tab-content" style="display: none;">
+        <div id="android-box" class="tab-content">
             <h3>Dispositivos Android (TV Box, Fire Stick, Mi Stick)</h3>
             <p class="subtitle">Baixe o nosso aplicativo oficial diretamente usando o aplicativo Downloader:</p>
             <div class="app-card">
                 <div class="app-name">🤖 CSV TV Oficial PRO</div>
                 <p>Instale de forma simplificada em seu dispositivo Android e tenha acesso completo aos 3 servidores.</p>
-                <a href="https://w.app" target="_blank" class="btn-action">Pedir Aplicativo Android</a>
+                <a href="https://w.app" target="_blank" rel="noopener noreferrer" class="btn-action">Pedir Aplicativo Android</a>
             </div>
         </div>
 
         <!-- CONTEÚDO: ROKU TV -->
-        <div id="roku-tv" class="tab-content" style="display: none;">
+        <div id="roku-tv" class="tab-content">
             <h3>Sistema Roku TV (AOC, Philco, Semp, Roku Express)</h3>
             <p class="subtitle">Disponível diretamente nos canais de streaming da sua TV:</p>
             <div class="app-card">
                 <div class="app-name">🔷 Meta Player / XCIPTV</div>
                 <p>Procure na busca de canais do sistema Roku. Leve, rápido e atualizado.</p>
-                <a href="https://w.app" target="_blank" class="btn-action">Solicitar Ativação Roku</a>
+                <a href="https://w.app" target="_blank" rel="noopener noreferrer" class="btn-action">Solicitar Ativação Roku</a>
             </div>
         </div>
 
         <!-- CONTEÚDO: MOBILE -->
-        <div id="mobile" class="tab-content" style="display: none;">
+        <div id="mobile" class="tab-content">
             <h3>Celulares e Tablets (Android / iPhone)</h3>
             <div class="app-card">
                 <div class="app-name">📱 Aplicativos Mobile</div>
                 <p>Assista direto no celular com a melhor qualidade de compressão de dados para não gastar sua internet.</p>
-                <a href="https://w.app" target="_blank" class="btn-action">Pedir Link para Celular</a>
+                <a href="https://w.app" target="_blank" rel="noopener noreferrer" class="btn-action">Pedir Link para Celular</a>
             </div>
         </div>
 
         <!-- CONTEÚDO: PC WEB -->
-        <div id="pc-web" class="tab-content" style="display: none;">
+        <div id="pc-web" class="tab-content">
             <h3>Computadores e Navegadores (Web Player)</h3>
             <div class="app-card">
                 <div class="app-name">💻 Assistir direto no Navegador</div>
-                <p>Não precisa instalar nada, assista direto pelo Chrome, Edge ou Safari usando nosso player exclusivo.</p>
